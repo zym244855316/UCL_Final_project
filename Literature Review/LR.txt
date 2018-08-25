@@ -1,0 +1,37 @@
+1.最新技术
+1).K-shell,寻找网络中的重要节点:       https://www.xueshu.com/jsjjsyfz/201509/1232366.html
+2).通过与机器学习相结合为近来趋势：    
+3).第2条的例子，为通过twitter发起者与内容预测传播规模，但值得注意的是其描述传播规模使用的是转发retweet，而转发与点赞的传播又有一定程度的区别）
+http://kupavskii.com/wp-content/uploads/2016/07/2012-Kupavskii-et-al-Prediction-of-retweet-cascades.pdf
+4).第2条的例子2，从内容、网络、以及时间衰减预测传播状况（然而论文要钱）：
+Peng H K, Zhu J, Piao D, et al. Retweet modeling using conditional random fields
+5).数学构建网络，如矩阵克罗内克积knonecker（具体很数学，我也不懂，大概就是通过矩阵特性来得到一个自相似的网络）
+6).传染病SIR动力学
+
+2.Twitter用户特性
+1).Why we twitter （闲聊&新闻）                                                 https://ebiquity.umbc.edu/_file_directory_/papers/369.pdf
+2).同质性（即物以类聚）影响较大，与第3条相互佐证：                   
+https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=1503&context=sis_research
+3).electome 美国大选 隔绝异见者：                                               
+http://www.vice.cn/read/journalists-and-trump-voters-live-in-separate-online-bubbles-mit-analysis-shows
+4).Twitter特性（有非幂率的关注者分布（non-power-law follower distribution）、小影响直径(short effective diameter)、低连接互惠性（Low reciprocity））
+低互惠性（即单向的）展现了twitter的媒体性：                              
+http://www.ambuehler.ethz.ch/CDstore/www2010/www/p591.pdf
+5).用户分类（传播者-低关注高粉丝，熟人-多双向，垃圾用户-高关注低粉丝），与第1,5条相互佐证，即传播者为传统媒体，闲聊为熟人社区：    Krishnamurthy B, Gill P, Arlitt M. A few chirps about twitter
+6).潜在属性推理（根据邻居属性判断），与第2条相互佐证：                                       https://pdfs.semanticscholar.org/32a7/a7ab3db8b4d15957f2458e177626aa3c9bf0.pdf
+7).入度（粉丝数）对信息传播的影响并没有转发影响度（过往转发率）对传播率的影响高：   Measuring User Influence in Twitter The Million Follower Fallacy
+
+
+3.目标，输入，输出与校验？
+1).目标：通过有限的输入，模拟信息传播情况。
+该网络以twitter为研究主体，试图将cyberspace与reality情况共同考虑在同一个网络中。网络空间特有的特征为小世界，无标度等基本特征，即便“草根”也有机会传遍整个网络；
+现实情况则为多聚团，低互惠性。
+
+2).输入：twitter发起者的属性、推文内容、网络（包括入出度，聚类情况，用户属性等）、时间、多次影响耐受度（待定）
+取其中多个（当然越多越详细，然而1.实际情况往往不允许；2.较少的输入若能取得相似的输出则更有普适性，避免过拟合）
+
+3).输出：信息传播的情况。整个传播网络，包括时间轴，相同社群内用户受影响次数等。
+
+4).校验：
+1.精确度
+2.与数据库对比：2a.横向与已有的传播数据库对比；2b.纵向与以往的传播情况对比，如用户（节点）的历史传播率等
